@@ -90,7 +90,7 @@ namespace CharacterCreator2_1.DAL
                 using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
                 {
                     conn.Open();
-                    NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM USERS WHERE username = @username;", conn);
+                    NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM USERS WHERE username = @username", conn);
                     cmd.Parameters.AddWithValue("@username", username);
 
                     NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -141,12 +141,13 @@ namespace CharacterCreator2_1.DAL
         {
             return new User()
             {
-                Id = Convert.ToInt32(reader["id"]),
+                Id = Convert.ToInt32(reader["userid"]),
                 Username = Convert.ToString(reader["username"]),
                 Password = Convert.ToString(reader["password"]),
                 Salt = Convert.ToString(reader["salt"]),
                 Role = Convert.ToString(reader["role"])
             };
         }
+
     }
 }

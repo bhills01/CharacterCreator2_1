@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace SampleApi
+namespace CharacterCreator2_1
 {
     /// <summary>
     /// The entry point for the api.

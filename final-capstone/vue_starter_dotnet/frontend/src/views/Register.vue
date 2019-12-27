@@ -2,9 +2,11 @@
   <div id="register" class="text-center">
     <form class="form-register" @submit.prevent="register">
       <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
-      <div class="alert alert-danger" role="alert" v-if="registrationErrors">
-        There were problems registering this user.
-      </div>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        v-if="registrationErrors"
+      >There were problems registering this user.</div>
       <label for="username" class="sr-only">Username</label>
       <input
         type="text"
@@ -32,51 +34,52 @@
         v-model="user.confirmPassword"
         required
       />
-      <router-link :to="{ name: 'login' }">
-        Have an account?
-      </router-link>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
-        Create Account
-      </button>
+      <router-link :to="{ name: 'login' }">Have an account?</router-link>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
     </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'register',
+  name: "register",
   data() {
     return {
       user: {
-        username: '',
-        password: '',
-        confirmPassword: '',
-        role: 'user',
+        API_URL: "https://localhost:44392/api",
+        username: "",
+        password: "",
+        confirmPassword: "",
+        role: "user"
       },
-      registrationErrors: false,
+      registrationErrors: false
     };
   },
   methods: {
     register() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/register`, {
-        method: 'POST',
+      // fetch(`${this.API_URL}/account/register`, {
+      fetch(`https://localhost:44392/api/account/register`, {
+        method: "POST",
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          Accept: "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(this.user),
+        body: JSON.stringify(this.user)
       })
-        .then((response) => {
+        .then(response => {
           if (response.ok) {
-            this.$router.push({ path: '/login', query: { registration: 'success' } });
+            this.$router.push({
+              path: "/login",
+              query: { registration: "success" }
+            });
           } else {
             this.registrationErrors = true;
           }
         })
 
-        .then((err) => console.error(err));
-    },
-  },
+        .then(err => console.error(err));
+    }
+  }
 };
 </script>
 

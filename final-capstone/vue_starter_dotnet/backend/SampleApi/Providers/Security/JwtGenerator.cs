@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleApi.Providers.Security
+namespace CharacterCreator2_1.Providers.Security
 {
     /// <summary>
     /// Represents a JWT generator.

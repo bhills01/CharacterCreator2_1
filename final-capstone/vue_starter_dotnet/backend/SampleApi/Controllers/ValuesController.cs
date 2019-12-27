@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace SampleApi.Controllers
+namespace CharacterCreator2_1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

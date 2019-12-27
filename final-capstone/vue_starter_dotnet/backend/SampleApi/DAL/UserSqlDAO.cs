@@ -4,9 +4,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Npgsql;
-using SampleApi.Models;
+using CharacterCreator2_1.Models;
 
-namespace SampleApi.DAL
+namespace CharacterCreator2_1.DAL
 {
     /// <summary>
     /// A SQL Dao for user objects.

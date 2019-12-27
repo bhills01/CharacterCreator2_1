@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SampleApi\SampleApi.csproj" />
+    <ProjectReference Include="..\SampleApi\CharacterCreator2_1.csproj" />
   </ItemGroup>
 
 </Project>

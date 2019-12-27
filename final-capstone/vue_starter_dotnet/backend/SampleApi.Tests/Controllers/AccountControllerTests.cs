@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using SampleApi.Controllers;
-using SampleApi.DAL;
-using SampleApi.Models;
-using SampleApi.Models.Account;
-using SampleApi.Providers.Security;
+using CharacterCreator2_1.Controllers;
+using CharacterCreator2_1.DAL;
+using CharacterCreator2_1.Models;
+using CharacterCreator2_1.Models.Account;
+using CharacterCreator2_1.Providers.Security;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleApi.Tests.Controllers
+namespace CharacterCreator2_1.Tests.Controllers
 {
     [TestClass]
     public class AccountControllerTests

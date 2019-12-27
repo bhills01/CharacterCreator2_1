@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SampleApi.Providers.Security;
+using CharacterCreator2_1.Providers.Security;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SampleApi.Tests.Providers.Security
+namespace CharacterCreator2_1.Tests.Providers.Security
 {
     [TestClass]
     public class PasswordHasherTests

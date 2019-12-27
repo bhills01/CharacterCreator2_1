@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace SampleApi.Providers.Security
+namespace CharacterCreator2_1.Providers.Security
 {
     /// <summary>
     /// The hash provider provides functionality to hash a plain text password and validate 
